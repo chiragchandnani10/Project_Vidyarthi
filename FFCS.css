@@ -1,0 +1,84 @@
+.newtext{
+    color: black;
+    text-decoration: none;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+.newtext:hover{
+color: #666;
+}
+.dropdown-menu{
+    margin-left: -60px;
+}
+
+.newtext1{
+    font-family: 'Montserrat','Lucida Sans', sans-serif;
+    color: black;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.newtext1:hover{
+    color: #666;
+}
+
+.newdrop{
+
+}
+
+
+
+/* Profile pid */
+
+.profile-pic{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+.profile-picdrop{
+    font-weight: bold;
+}
+.profile-drop{
+    margin-left: -60px;
+
+}
+.newdrop5{
+    margin-left: -89px;
+
+
+
+}
+
+.timetable{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: #A6D1E6;
+    text-align: center;
+    padding: 50px 5px;
+  }
+  .footerh3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.0rem;
+    color: gray;
+  }
+  .icons{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .icons:hover{
+    color: gray;
+  }
+  .fa-copyright{
+    margin-right: 4px;
+  }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                
+  background-color: white;
+}
+
+.container{
+    margin-left: 500px;
+    text-align: center;
+  max-width: 450px;
+}
+
+input[type=text],
+input[type=text]:focus{
+  color: #fff;
+  border: none;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+li.list-group-item{
+  background-color: #423a6f;
+  color: #F8F9FA;
+  padding: 17px;
+}
+
+.delete{
+  cursor: pointer;
+}
+
+label.add{
+  margin-bottom: 15px;
+}
+
+.filtred{
+  display: none !important;
+}
+
+        </style>
+    </head>
+    <body>
+
+       
+    
+        <div class="container">
+  
+            <!--  HEADER  -->
+              <header class="text-center text-light my-4">
+                <h1 class="mb-4" style="font-size: 35px;">Todo List</h1>
+                <form class="search">
+                  <input type="text" class="form-control m-auto" name="search" placeholder="search todos">
+                </form>
+              </header>
+              
+            <!--  LIST  -->
+              <ul class="list-group todos mx-auto text-light">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span style="font-size: 20px;">eat pizza</span>
+                  <i class="far fa-trash-alt delete"></i>
+                </li>
+                
+                 <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span style="font-size: 20px;">listen to music</span>
+                  <i class="far fa-trash-alt delete"></i>
+                </li>
+              </ul>
+              
+            <!--  FORM  -->
+              <form class="add text-center my-4">
+                <label for="add" style="font-size: 20px;"class="add text-light">Add a new todo:</label>
+                <input type="text" class="form-control m-auto" name="add" id="add">
+              </form>
+              
+            </div>
+       <script>
+        const addForm = document.querySelector("form.add");
+const ul = document.querySelector("ul.todos");
+const searchFormInput = document.querySelector("form.search input");
+
+//ADD NEW TODO
+const handleAddItem = (inputValue) => {
+  const html = `
+   <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>${inputValue}</span>
+      <i class="far fa-trash-alt delete"></i>
+    </li>
+  `;
+  ul.innerHTML += html;
+};
+
+addForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const inputValue = addForm.add.value;
+  if (inputValue.length) handleAddItem(inputValue);
+  addForm.add.value = "";
+});
+
+//REMOVE TODO
+ul.addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
+  }
+});
+
+//SEARCH INPUT: PREVENT DEFAULT ACTION - LITTLE BUG I FOUND IN THE COURSE PROJECT
+searchFormInput.parentElement.addEventListener("submit", (e) =>
+  e.preventDefault()
+);
+
+//SEARCH AND FILTER TODOS
+const filterItems = (value) => {
+  Array.from(ul.children).forEach((li) => {
+    if (!li.textContent.toLowerCase().includes(value)) li.classList.add("filtred");
+    else li.classList.remove("filtred");
+  });
+};
+
+searchFormInput.addEventListener("keyup", (e) => {
+  const value = searchFormInput.value.toLowerCase().trim();
+  filterItems(value);
+});
+
+       </script> 
+    </body>
+</html>

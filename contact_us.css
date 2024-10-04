@@ -1,0 +1,64 @@
+#contact-us{
+    
+    padding-top: 180px;
+    text-align: center;
+  }
+
+  iframe{
+    box-shadow: 2rem black;
+  }
+  
+  
+  .contacth1{
+    font-family: 'Noto Serif Display',serif;
+  }
+  span{
+    font-family: 'Noto Serif Display',serif;
+  }
+  .fullblock{
+    margin: 100px 10px;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+  }
+  .theory{
+    width: auto;
+    margin-left: 122px;
+}
+  
+  .contactmob{
+    margin-top: 100px;
+    padding: 20px 5px;
+    font-family: 'Montserrat',sans-serif;
+  }
+  .contactem{
+    padding: 15px 5px;
+    font-family: 'Montserrat',sans-serif;
+  }
+  .contactadd{
+    padding: 15px 5px;  
+    font-family: 'Montserrat',sans-serif;
+  }
+
+
+  footer{
+    background-color: #A6D1E6;
+    text-align: center;
+    padding: 50px 5px;
+  }
+  .footerh3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.0rem;
+    color: gray;
+  }
+  .icons{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .icons:hover{
+    color: gray;
+  }
+  .fa-copyright{
+    margin-right: 4px;
+  }
